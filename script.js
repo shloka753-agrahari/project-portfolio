@@ -4,7 +4,9 @@ const themeIcon = themeToggle
     ? themeToggle.querySelector("i")
     : null;
 
+
 const savedTheme = localStorage.getItem("portfolio-theme");
+
 
 if (savedTheme === "dark") {
     document.body.classList.add("dark-theme");
@@ -21,6 +23,7 @@ if (themeToggle) {
 
         if (document.body.classList.contains("dark-theme")) {
 
+            
             localStorage.setItem("portfolio-theme", "dark");
 
             if (themeIcon) {
@@ -29,6 +32,7 @@ if (themeToggle) {
 
         } else {
 
+          
             localStorage.setItem("portfolio-theme", "light");
 
             if (themeIcon) {
@@ -37,6 +41,7 @@ if (themeToggle) {
         }
     });
 }
+
 
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.getElementById("navbar");
@@ -67,6 +72,7 @@ if (menuToggle && navbar) {
         }
     });
 
+ 
     document.querySelectorAll(".nav-link").forEach(function (link) {
 
         link.addEventListener("click", function () {
@@ -144,6 +150,8 @@ progressBars.forEach(function (bar) {
     skillObserver.observe(bar);
 });
 
+
+
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
@@ -162,6 +170,7 @@ if (contactForm) {
 
         event.preventDefault();
 
+       
         nameError.textContent = "";
         emailError.textContent = "";
         messageError.textContent = "";
@@ -173,12 +182,13 @@ if (contactForm) {
         const email = emailInput.value.trim();
         const message = messageInput.value.trim();
 
-       
+      
         if (name.length < 3) {
             nameError.textContent = "Name must contain at least 3 characters.";
             isValid = false;
         }
 
+       
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(email)) {
@@ -186,6 +196,7 @@ if (contactForm) {
             isValid = false;
         }
 
+     
         if (message.length < 10) {
             messageError.textContent = "Message must contain at least 10 characters.";
             isValid = false;
@@ -200,6 +211,7 @@ if (contactForm) {
 
     });
 
+    
     [nameInput, emailInput, messageInput].forEach(function (input) {
 
         input.addEventListener("input", function () {
@@ -215,6 +227,7 @@ if (contactForm) {
 
     });
 }
+
 
 const typingText = document.querySelector(".typing-text");
 
