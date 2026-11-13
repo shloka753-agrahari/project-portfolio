@@ -19,13 +19,13 @@ html {
 }
 
 body.dark-theme {
-  --bg-color: rgb(209, 249, 209);
-  --second-bg: #dee3f8;
-  --text-color: #f1f2ff;
-  --main-color: rgb(245, 187, 187);
-  --card-color: white;
-  --muted-color: rgb(229, 216, 216);
-  --border-color: rgb(185, 185, 251);
+    --bg-color: #121212;
+    --second-bg: #1e1e1e;
+    --text-color: #f1f1f1;
+    --main-color: #bb86fc;
+    --card-color: #252525;
+    --muted-color: #cccccc;
+    --border-color: #444444;
 }
 
 body {
